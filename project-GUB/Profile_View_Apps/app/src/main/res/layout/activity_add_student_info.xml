@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddStudentInfoActivity">
+
+
+    <EditText
+        android:id="@+id/name"
+        android:hint="Enter Name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+
+
+    <EditText
+        android:id="@+id/id"
+        android:hint="Enter Id"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+    <EditText
+        android:id="@+id/quiz"
+        android:hint="Enter Quiz Mark"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+    <EditText
+        android:id="@+id/ksa1"
+        android:hint="Enter KSA1 Mark"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+
+    <EditText
+        android:id="@+id/ksa2"
+        android:hint="Enter KAS2 Mark"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+    <EditText
+        android:id="@+id/mid"
+        android:hint="Enter Mid Mark"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+
+    <EditText
+        android:id="@+id/finals"
+        android:hint="Enter Final Mark"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="60dp"/>
+</LinearLayout>
