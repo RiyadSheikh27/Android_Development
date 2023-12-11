@@ -12,21 +12,13 @@
         android:id="@+id/recylerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:itemCount="10"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="41dp"
         tools:listitem="@layout/item_profile" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginVertical="40dp"
-        android:backgroundTint="#FBFBFB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

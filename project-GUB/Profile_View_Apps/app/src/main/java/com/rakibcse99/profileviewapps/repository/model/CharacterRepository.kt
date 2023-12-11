@@ -4,5 +4,7 @@ import com.rakibcse99.profileviewapps.base.ErrorResponse
 import com.rakibcse99.profileviewapps.base.Resource
 
 interface CharacterRepository {
-    suspend fun getCharacter(): Resource<MutableList<CharacterModel>, ErrorResponse>
+
+    suspend fun getStudent(): Resource<MutableList<StudentModelItem>, ErrorResponse>
+    suspend fun addtStudent(studentModelItem: StudentModelItem): Resource<StudentModelItem, ErrorResponse>
 }

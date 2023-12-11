@@ -17,7 +17,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
 
         <TextView
             android:id="@+id/firstName"
@@ -27,7 +29,7 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            tools:text="Name :Rakibul Hasan" />
+            tools:text="Name :Md. Fazle Rabbi Riyad" />
 
         <TextView
             android:id="@+id/id"
@@ -36,7 +38,7 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            tools:text="Student ID: 1242222" />
+            tools:text="Student ID:213002027" />
 
         <TextView
             android:id="@+id/quiz"
@@ -86,7 +88,7 @@
             tools:text="Final: 40" />
 
         <TextView
-            android:id="@+id/Total"
+            android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"

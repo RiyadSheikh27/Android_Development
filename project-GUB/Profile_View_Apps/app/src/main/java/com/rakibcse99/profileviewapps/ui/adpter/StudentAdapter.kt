@@ -5,24 +5,23 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.rakibcse99.profileviewapps.databinding.ItemProfileBinding
-import com.rakibcse99.profileviewapps.repository.model.CharacterModel
+import com.rakibcse99.profileviewapps.repository.model.StudentModelItem
 import com.rakibcse99.profileviewapps.utils.SimpleCallback
 import javax.inject.Inject
 
-class CharacterModelViewAdapter @Inject constructor() :  RecyclerView.Adapter<CharacterModelViewAdapter.CharacterHolder>() {
-    var listener: SimpleCallback<CharacterModel>? = null
+class StudentAdapter @Inject constructor() :  RecyclerView.Adapter<StudentAdapter.CharacterHolder>() {
+    var listener: SimpleCallback<StudentModelItem>? = null
     inner class CharacterHolder(val binding: ItemProfileBinding) :
         RecyclerView.ViewHolder(binding.root)
 
 
-    private val differCallback = object : DiffUtil.ItemCallback<CharacterModel>() {
-        override fun areItemsTheSame(oldItem: CharacterModel, newItem: CharacterModel): Boolean {
+    private val differCallback = object : DiffUtil.ItemCallback<StudentModelItem>() {
+        override fun areItemsTheSame(oldItem: StudentModelItem, newItem: StudentModelItem): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: CharacterModel, newItem: CharacterModel): Boolean {
+        override fun areContentsTheSame(oldItem: StudentModelItem, newItem: StudentModelItem): Boolean {
             return oldItem == newItem
         }
     }
@@ -44,22 +43,26 @@ class CharacterModelViewAdapter @Inject constructor() :  RecyclerView.Adapter<Ch
 
 
     override fun onBindViewHolder(holder: CharacterHolder, position: Int) {
-        val characterModel = differ.currentList[position]
+        val studentModel = differ.currentList[position]
 
 //        holder
         holder.binding.apply {
-            characterModel?.let {
-                firstName.text=it.name
-                gender.text=it.gender
-                dateOfBirth.text=it.dateOfBirth
-                Glide
-                    .with(holder.binding.root)
-                    .load(it.image)
-                    .centerCrop()
-                    .into(holder.binding.profileImage)
+            studentModel?.let {
+                   firstName.text=it.name
+                id.text=it.id.toString()
+                ksa1.text=it.ksa1.toString()
+                ksa2.text=it.ksa2.toString()
+                quiz.text=it.quizMark.toString()
+                mid.text=it.mid.toString()
+                finalS.text=it.final.toString()
+                val totalNumber=it.ksa2+it.ksa2+it.final+it.quizMark+it.mid
+                total.text=totalNumber.toString()
 
-                     root.setOnClickListener {
-                    listener?.callback(characterModel)
+
+
+
+                root.setOnClickListener {
+                    listener?.callback(studentModel)
 
                 }
             }
