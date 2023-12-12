@@ -5,6 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.rakibcse99.profileviewapps.base.ErrorResponse
 import com.rakibcse99.profileviewapps.base.Resource
 import com.rakibcse99.profileviewapps.repository.model.CharacterRepository
+import com.rakibcse99.profileviewapps.repository.model.DataResponse
+import com.rakibcse99.profileviewapps.repository.model.StudentDto
 import com.rakibcse99.profileviewapps.repository.model.StudentModelItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -29,14 +31,23 @@ class CharacterViewModel @Inject constructor(val repository: CharacterRepository
 
 
 
-    private var _addstudentModelResult =
-        MutableSharedFlow<Resource<StudentModelItem, ErrorResponse>>()
-    var addStudentModelResult: SharedFlow<Resource<StudentModelItem, ErrorResponse>> =
-        _addstudentModelResult
+    private var _dataResponseModelResult =
+        MutableSharedFlow<Resource<DataResponse, ErrorResponse>>()
+    var dataResponseModelResult: SharedFlow<Resource<DataResponse, ErrorResponse>> =
+        _dataResponseModelResult
 
-    fun addStudent(studentModelItem: StudentModelItem) = viewModelScope.launch {
-        _addstudentModelResult.emit(Resource.loading(null))
-        _addstudentModelResult.emit(repository.addtStudent(studentModelItem))
+    fun addStudent(studentModelItem: StudentDto) = viewModelScope.launch {
+        _dataResponseModelResult.emit(Resource.loading(null))
+        _dataResponseModelResult.emit(repository.addStudent(studentModelItem))
+    }
+    fun updateStudent(studentModelItem: StudentModelItem) = viewModelScope.launch {
+        _dataResponseModelResult.emit(Resource.loading(null))
+        _dataResponseModelResult.emit(repository.updateStudent(studentModelItem))
+    }
+
+    fun delete(id: String)  = viewModelScope.launch {
+        _dataResponseModelResult.emit(Resource.loading(null))
+        _dataResponseModelResult.emit(repository.delete(id))
     }
 }
 
