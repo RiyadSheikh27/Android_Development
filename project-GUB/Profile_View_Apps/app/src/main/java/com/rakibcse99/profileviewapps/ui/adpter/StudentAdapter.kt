@@ -57,16 +57,16 @@ class StudentAdapter @Inject constructor() :
 //        holder
         holder.binding.apply {
             studentModel?.let {
-                firstName.text = it.name
-                id.text = it.id.toString()
-                ksa1.text = it.ksa1.toString()
-                ksa2.text = it.ksa2.toString()
-                quiz.text = it.quizMark.toString()
-                mid.text = it.mid.toString()
-                finalS.text = it.final.toString()
-                val totalNumber =
-                    (it.ksa1 ?: 0) + (it.ksa2 ?: 0) + (it.final ?: 0) + (it.quizMark ?: 0) + (it.mid
-                        ?: 0)
+                firstName.text ="Name:"+it.name
+                id.text ="ID:"+ it.id.toString()
+                ksa1.text ="Mark of KSA1: "+ it.ksa1.toString()
+                ksa2.text = "Mark of KSA2: "+it.ksa2.toString()
+                quiz.text = "Mark of Quiz: "+it.quizMark.toString()
+                mid.text = "Mark of Mid: "+it.mid.toString()
+                finalS.text = "Mark of Final: "+it.final.toString()
+                var total_mark= (it.ksa1 ?: 0) + (it.ksa2 ?: 0) + (it.final ?: 0) + (it.quizMark ?: 0) + (it.mid
+                    ?: 0)
+                val totalNumber ="Total Mark:"+total_mark
                 total.text = totalNumber.toString()
 
 

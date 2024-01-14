@@ -31,8 +31,7 @@ class UpdateStudentActivity  : AppCompatActivity() {
         val ksa2 = intent.extras?.getInt("ksa2")
         val mid = intent.extras?.getInt("mid")
         val mark = intent.extras?.getInt("mark")
-        val total = intent.extras?.getInt("total")
-        val final = intent.extras?.getInt("final")
+         val final = intent.extras?.getInt("final")
 
 
         binding.id.setText(id.toString())

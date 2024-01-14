@@ -1,5 +1,6 @@
 package com.rakibcse99.profileviewapps.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -36,6 +37,7 @@ class StudentListActivity : AppCompatActivity() {
         viewModeCharacter.getStudent()
         initViews()
         studentAdapter.updateListener = object : SimpleCallback<StudentModelItem> {
+            @SuppressLint("SuspiciousIndentation")
             override fun callback(any: StudentModelItem) {
                 val bundle = Bundle()
                 bundle.putInt("id", any.id ?: 0)

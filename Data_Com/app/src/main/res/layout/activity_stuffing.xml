@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Stuffing"
+    android:layout_margin="15dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Character Stuffing And De-Stuffing"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/font5"
+        />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/edt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Character In Upper Case"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Send"
+        android:textSize="25sp"
+        android:fontFamily="@font/font1"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Output:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/font5"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/font5"
+        />
+</LinearLayout>

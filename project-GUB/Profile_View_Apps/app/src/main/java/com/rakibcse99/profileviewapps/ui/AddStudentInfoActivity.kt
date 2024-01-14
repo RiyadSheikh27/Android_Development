@@ -35,7 +35,9 @@ class AddStudentInfoActivity : AppCompatActivity() {
             if (validation()) {
                 var student: StudentDto =
                     StudentDto(
+
                         binding.finals.text.toString(),
+                        binding.id.text.toString(),
 
                         binding.ksa1.text.toString(),
                         binding.ksa2.text.toString(),
